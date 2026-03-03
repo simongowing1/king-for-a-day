@@ -1,7 +1,8 @@
 # King for a Day
 
-An API inspired by Bruce Mclean's 1967 artwork. The dataset is comprised of 1000 artwork titles listed in numberical order.
-A request to the API returns data about an individual artwork.
+An API inspired by Bruce Mclean's 1969 artwork.
+The dataset is comprised of 1000 artwork titles listed in numberical order.
+A request to the API returns data about an individual artwork or selection of artworks.
 
 ## Stack
 - Runtime: Node.js v24 (Bun-compatible when installed)
