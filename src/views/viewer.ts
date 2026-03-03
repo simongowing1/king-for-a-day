@@ -5,6 +5,9 @@ export const viewerRandomHtml = /* html */ `<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>King for a Day</title>
   <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -14,7 +17,7 @@ export const viewerRandomHtml = /* html */ `<!DOCTYPE html>
       justify-content: center;
       background: #F1EBE5;
       color: #0a0a0a;
-      font-family: Georgia, 'Times New Roman', serif;
+      font-family: 'Courier Prime', Courier, monospace;
       padding: 2rem;
     }
     #app {
@@ -28,7 +31,6 @@ export const viewerRandomHtml = /* html */ `<!DOCTYPE html>
       
     }
     .id {
-      font-size: 0.85em;
       margin-right: 4ch;
     }
     .loading {
