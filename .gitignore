@@ -1,5 +1,7 @@
 node_modules
 .wrangler
+claude.md
+context/
 .env
 .env.local
 .env.development.local
@@ -8,3 +10,4 @@ node_modules
 .env.development
 .env.test
 .env.production
+context
