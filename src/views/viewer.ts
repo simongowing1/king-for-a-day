@@ -1,4 +1,4 @@
-export const viewerRandomHtml = /* html */ `<!DOCTYPE html>
+export const viewerHtml = (fetchUrl: string) => /* html */ `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -28,7 +28,6 @@ export const viewerRandomHtml = /* html */ `<!DOCTYPE html>
       font-size: clamp(1.25rem, 4vw, 2rem);
       line-height: 1.4;
       letter-spacing: 0.01em;
-      
     }
     .id {
       margin-right: 4ch;
@@ -51,7 +50,7 @@ export const viewerRandomHtml = /* html */ `<!DOCTYPE html>
     <p v-else-if="error" class="error">{{ error }}</p>
     <p v-else class="artwork">
       <span class="id">{{ artwork.id }}</span>
-      <span >{{ artwork.title }}</span>
+      <span>{{ artwork.title }}</span>
     </p>
   </div>
   <script>
@@ -63,8 +62,8 @@ export const viewerRandomHtml = /* html */ `<!DOCTYPE html>
         const error = ref(null)
         onMounted(async () => {
           try {
-            const res = await fetch('/artwork/random')
-            if (!res.ok) throw new Error('Failed to fetch artwork')
+            const res = await fetch('${fetchUrl}')
+            if (!res.ok) throw new Error(res.status === 404 ? 'Artwork not found' : 'Failed to fetch artwork')
             artwork.value = await res.json()
           } catch (e) {
             error.value = e.message
